@@ -1,13 +1,17 @@
 class CocktailsController < ApplicationController
   def index
-  end
-
-  def new
-  end
-
-  def create
+    @cocktails = Cocktail.all
   end
 
   def show
+    @cocktail = Cocktail.find(params[:id])
+  end
+
+  def new
+    @cocktail = Cocktail.new
+    @cocktail.save
+  end
+
+  def create
   end
 end
