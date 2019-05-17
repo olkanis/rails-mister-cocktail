@@ -1,6 +1,7 @@
 <div class="container">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.association :ingredient, collection: @ingredients, input_html: { multiple: true }, include_hidden: false %>
+    <%= f.association :ingredient %>
+    <%= f.association :cocktail, :as => :hidden %>
     <%= f.input :description %>
     <%= f.submit %>
   <% end %>

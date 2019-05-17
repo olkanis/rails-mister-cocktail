@@ -18,9 +18,9 @@ user = JSON.parse(ingredient)
 
 user['drinks'].each do |drink|
   ingredient = Ingredient.create!(name: drink['strIngredient1'])
+  ingredient.save
   # cocktail = Cocktail.create!(name: Faker::Beer.name)
   # Dose.create!(
-   # description: ['1cl', '2cl', '3cl'].sample,
-   # ingredient: ingredient, cocktail: cocktail
-
+  # description: ['1cl', '2cl', '3cl'].sample,
+  # ingredient: ingredient, cocktail: cocktail
 end
